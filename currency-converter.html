@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency-converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body class="body">
+    <form class="form js-form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">Kalkulator walutowy</legend>
+            <p>
+                <label class="form__label">
+                    <span class="form__labelText">
+                        Kwota
+                    </span>
+                    <input class="form__field js-money" name="money" type="number" step="0.1" min="0" required>
+                </label>
+                <label>
+                    <select class="form__field form__field--select js-currency" name="currency">
+                        <option value="currency">select a currency...</option>
+                        <option value="euro">euro</option>
+                        <option value="dolar">dolar</option>
+                        <option value="frank">frank szwajcarski</option>
+                        <option value="funt">funt</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label class="form__label">
+                    <span class="form__labelText">
+                        Aktualny kurs
+                    </span>
+                    <input class="form__field js-exchangeRate" name="exchange rate" type="number" step="0.01" min="0" required>
+            </p>
+            <p class="form__paragraph">Po przeliczeniu: <strong class="js-result">N/A</strong> złotych</p>
+            <p>
+                <button class="form__button">Przelicz na złotówki</button>
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

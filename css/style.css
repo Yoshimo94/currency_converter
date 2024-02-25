@@ -1,0 +1,70 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.form {
+    width: 100%;
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+.form__fieldset {
+    border: 3px solid #7a7a7a;
+    border-radius: 5px;
+    background-image: url("../images/coins.jpg");
+}
+
+.form__legend {
+    background-color: #505050;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.form__label {
+    margin: 0px 15px;
+}
+
+.form__labelText {
+    width: 100%;
+    max-width: 120px;
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.form__field {
+    width: 100%;
+    max-width: 250px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #7a7a7a;
+}
+
+.form__field--select {
+    max-width: 160px;
+}
+
+.form__paragraph {
+    font-size: 18px;
+    margin-left: 15px;
+    color: white;
+}
+
+.form__button {
+    margin-left: 15px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #3b3b3b;
+    background-color: #505050;
+    color: white;
+    cursor: pointer;
+}
+
+.form__button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
