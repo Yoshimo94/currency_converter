@@ -1,6 +1,6 @@
 ﻿# Currency Converter:
  - simple currency converter with background image
- - 4 kind of currency to convert from PLN: EUR, USD, CHF, GPB
+ - 4 kind of currency to convert from PLN: EUR, USD, CHF, GBP
 
 ## Github Page
  https://yoshimo94.github.io/currency_converter
