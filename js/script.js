@@ -1,16 +1,13 @@
 {   
-    const calculateResult = (event) => {
-        event.preventDefault();
+    const calculateResult = () => {
         const moneyElement = document.querySelector(".js-money");
         const money = moneyElement.value;
-        const currencyRate = setExchangeRate();
+        const currencyRate = chooseExchangeRate();
 
-        let result = money * currencyRate;
-
-        updateResultText(result);       
+        return money * currencyRate;     
     };
 
-    const setExchangeRate = () => {
+    const chooseExchangeRate = () => {
         const euroRate = 4.33;
         const usdRate = 4.01;
         const chrRate = 4.54;
@@ -37,10 +34,16 @@
         resultElement.innerText = result.toFixed(2);
     };
 
+    const onSumbitForm = (event) => {
+        event.preventDefault();
+        let result = calculateResult();
+        updateResultText(result);
+    }
+
     const init = () => {
         const formElement = document.querySelector(".js-form");
-        formElement.addEventListener("submit", calculateResult);
-        formElement.addEventListener("input", setExchangeRate);
+        formElement.addEventListener("submit", onSumbitForm);
+        formElement.addEventListener("input", chooseExchangeRate);
     };
 
     init();
