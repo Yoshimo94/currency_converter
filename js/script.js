@@ -2,13 +2,12 @@
     const calculateResult = (event) => {
         event.preventDefault();
         const moneyElement = document.querySelector(".js-money");
-        const resultElement = document.querySelector(".js-result");
         const money = moneyElement.value;
         const currencyRate = setExchangeRate();
 
         let result = money * currencyRate;
 
-        resultElement.innerText = result.toFixed(2);
+        updateResultText(result);       
     };
 
     const setExchangeRate = () => {
@@ -31,6 +30,11 @@
             case "currency":
                 return exchangeRateElement.value = ""               
         }
+    };
+
+    updateResultText = (result) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerText = result.toFixed(2);
     };
 
     const init = () => {
