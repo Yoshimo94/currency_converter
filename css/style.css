@@ -6,20 +6,31 @@ html {
     box-sizing: inherit;
 }
 
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../images/banknotes.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 .form {
-    width: 100%;
-    max-width: 700px;
     margin: 15px auto;
+    flex-basis: 700px;
+    margin: 20px;
+    padding: 40px;
 }
 
 .form__fieldset {
-    border: 3px solid #7a7a7a;
-    border-radius: 5px;
-    background-image: url("../images/coins.jpg");
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: rgb(226, 226, 226);
 }
 
 .form__legend {
-    background-color: #505050;
+    background-color: black;
     color: white;
     padding: 7px;
     border-radius: 5px;
@@ -32,17 +43,16 @@ html {
 .form__labelText {
     width: 100%;
     max-width: 120px;
-    color: white;
     display: inline-block;
     font-size: 18px;
+    font-weight: bold;
 }
 
 .form__field {
-    width: 100%;
-    max-width: 250px;
     padding: 7px;
     border-radius: 5px;
-    border: 1px solid #7a7a7a;
+    border: 2px solid black;
+    margin: 5px;
 }
 
 .form__field--select {
@@ -52,15 +62,13 @@ html {
 .form__paragraph {
     font-size: 18px;
     margin-left: 15px;
-    color: white;
 }
 
 .form__button {
     margin-left: 15px;
     padding: 7px;
     border-radius: 5px;
-    border: 1px solid #3b3b3b;
-    background-color: #505050;
+    background-color: black;
     color: white;
     cursor: pointer;
 }
